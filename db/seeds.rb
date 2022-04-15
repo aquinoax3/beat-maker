@@ -14,7 +14,7 @@ sound2 = Sound.create(soundname: 'Hi-Hat-1', sound: "./app/SoundSamples/hi-hat-0
 
 puts "🏕 Seeding users..."
 user1 = User.create(username: "beatmaker_dylan", password: "abc123" , profile: "beat 197 slaps" , image:"https://tv-fanatic-res.cloudinary.com/iu/s--bPLtAl88--/t_full/cs_srgb,f_auto,fl_strip_profile.lossy,q_auto:420/v1645078539/dylan-severance-s1e2.jpg" )
-user2 = User.create(username: "supa_hot_fire", password: "123abc", profile: "Beats... I make em. But I'm not a producer.", image: "https://i.kym-cdn.com/entries/icons/original/000/009/644/rap-battle.jpg" )
+user2 = User.create(username: "supa_hot", password: "123abc", profile: "Beats... I make em. But I'm not a producer.", image: "https://i.kym-cdn.com/entries/icons/original/000/009/644/rap-battle.jpg" )
 
 puts "🏕 Seeding beats..."
 Beat.create(sound: sound1, user: user1, beatname: "firstbeat")
