@@ -53,6 +53,13 @@
     "a a" 45vh
     "b b" 45vh;
   background-color: #8c8d8f;
+
+  /* .homepage {
+  display: grid;
+  grid-template:
+    "a a" 45vh
+    "b b" 45vh;
+  background-color: #8c8d8f; */
 }
 
 /* grid-template:
