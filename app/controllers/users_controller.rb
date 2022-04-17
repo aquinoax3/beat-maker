@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
   before_action :authorize
-  skip_before_action :authorize, only:[:index]
+  # skip_before_action :authorize, only:[:index]
   
   
   # GET /users
@@ -54,6 +54,6 @@ class UsersController < ApplicationController
     end
 
     def authorize
-      return render json: {error: "Not authorized"}, status: :unauthorized
+      return render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
     end
 end
