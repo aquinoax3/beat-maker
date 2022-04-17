@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-
+  before_action :authorize
+  skip_before_action :authorize, only:[:index]
+  
+  
   # GET /users
   def index
     @users = User.all
@@ -53,5 +56,9 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.fetch(:user, {})
+    end
+
+    def authorize
+      return render json: {error: "Not authorized"}, status: :unauthorized
     end
 end
