@@ -48,10 +48,10 @@
 /* added styling for Homepage */
 
 .homepage {
-  display: grid;
-  grid-template:
+  display: flex;
+  /* grid-template:
     "a a" 45vh
-    "b b" 45vh;
+    "b b" 45vh; */
   background-color: #8c8d8f;
 
   /* .homepage {

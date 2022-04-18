@@ -33,7 +33,7 @@ function Authorize() {
             </label>
             <label>
                 Password:
-                <input type="text" name="password" />
+                <input type="password" name="password" />
             </label>
             <input type="submit" value="Submit" />
         </form>
