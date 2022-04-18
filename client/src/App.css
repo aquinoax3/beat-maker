@@ -1,3 +1,4 @@
+/* standard css styling for app from react */
 .App {
   text-align: center;
 }
@@ -36,3 +37,33 @@
     transform: rotate(360deg);
   }
 }
+
+/* nav bar */
+.navbar {
+  display: grid;
+  grid-template: "a a a a" 10vh;
+  background-color: #afafb1;
+}
+
+/* added styling for Homepage */
+
+.homepage {
+  display: flex;
+  /* grid-template:
+    "a a" 45vh
+    "b b" 45vh; */
+  background-color: #8c8d8f;
+
+  /* .homepage {
+  display: grid;
+  grid-template:
+    "a a" 45vh
+    "b b" 45vh;
+  background-color: #8c8d8f; */
+}
+
+/* grid-template:
+    "a a a" 40vh 40vw
+    "b c c" 30vh
+    "b c c" 15vh
+    "b c c" 15vh; */
