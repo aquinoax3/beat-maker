@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Homepage from "./Homepage";
 import NavBar from "./Navbar";
+import Authorize from "./Authorize"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <div>
       <NavBar />
       <Homepage />
+      <Authorize />
     </div>
   );
 }
