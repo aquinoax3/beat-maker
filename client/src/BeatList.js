@@ -8,7 +8,6 @@ import "./App.css";
 
 function BeatList({slap}) {
   // console.log("Each slap:", slap)
-  // console.log("Slap sound:", slap.slap.sound)
 
   const [playing, setPlaying] = useState(true);
 
