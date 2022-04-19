@@ -1,41 +1,25 @@
 import React, {useState} from "react";
+// import { Routes, Route, Link } from "react-router-dom";
+import {Route, Switch, BrowswerRouter as Router } from "react-router-dom"
 import "./App.css";
-import Homepage from "./Homepage";
+import Home from "./Home";
 import NavBar from "./Navbar";
+import Beats from "./Beats";
 import Authorize from "./Authorize"
 
 function App() {
 
-  const [sounds, setSounds] = useState([
-    {
-      name: "kick",
-      // sound: require('./SoundSamples/kick08.wav').default,
-      sound: './SoundSamples/kick08.wav',
-      key: "A",
-    },
-    {
-      name: "hi-hat",
-      // sound: require('./SoundSamples/hi-hat-058.wav').default,
-      sound: './SoundSamples/hi-hat-058.wav',
-      key: "S",
-    },
-  ]);
-
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //   </header>
-    // </div>
-    <div>
+    <div className="app">
       <NavBar />
-      <h1>Drumkit</h1>
-      <div className="drums">
-				{sounds.map((slap) => (
-          // console.log(slap)
-					<Homepage key={slap.key} slap={slap} />
-				))}
-			</div>
-      <Authorize />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/beats">
+          <Beats />
+        </Route>
+      </Switch>
     </div>
   );
 }
