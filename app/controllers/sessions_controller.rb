@@ -1,8 +1,8 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
     skip_before_action :authorize, only: [:create]
 
-    def show
-        
+    def create
+        # this is where you only LOGIN
         # find user by using username params
         user = User.find_by(username: params[:username])
         
@@ -10,7 +10,7 @@ class SessionController < ApplicationController
             
             # save the user's ID to the session hash
             session[:user_id] = user.id
-            
+
             # render the user as a json file
             render json: user, status: :created
         else

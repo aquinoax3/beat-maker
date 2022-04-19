@@ -13,15 +13,18 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     @user = set_user
+    
     if @user
       render json: @user, status: :ok
     else
       render json: {error: "User not found"}, status: :not_found
+    end
   end
 
   # POST /users
   def create
     
+    # This is sign up this creates the user
     @user = User.create!(user_params)
     
     if @user
@@ -55,6 +58,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.permit(:username, :password)
+      params.permit(:id, :username, :password, :profile, :image)
     end
 end

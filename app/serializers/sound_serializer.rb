@@ -1,4 +1,4 @@
 class SoundSerializer < ActiveModel::Serializer
-  attributes :id, :soundname, :sound
-  has_many :beats
+  attributes :id, :name, :sound, :key
+  has_many :kits
 end

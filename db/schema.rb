@@ -10,26 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_15_174415) do
+ActiveRecord::Schema.define(version: 2022_04_19_181552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beats", force: :cascade do |t|
-    t.bigint "sound_id"
     t.bigint "user_id"
-    t.string "beatname"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["sound_id"], name: "index_beats_on_sound_id"
     t.index ["user_id"], name: "index_beats_on_user_id"
   end
 
-  create_table "sounds", force: :cascade do |t|
-    t.string "soundname"
-    t.string "sound"
+  create_table "kits", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_kits_on_user_id"
+  end
+
+  create_table "sounds", force: :cascade do |t|
+    t.string "name"
+    t.string "sound"
+    t.string "key"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sounds_per_kits", force: :cascade do |t|
+    t.bigint "sound_id"
+    t.bigint "kit_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["kit_id"], name: "index_sounds_per_kits_on_kit_id"
+    t.index ["sound_id"], name: "index_sounds_per_kits_on_sound_id"
   end
 
   create_table "users", force: :cascade do |t|

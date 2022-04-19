@@ -1,6 +1,6 @@
 class Sound < ApplicationRecord
     
-    has_many :beats
-    has_many :users, through: :beats
+    has_many :sounds_per_kits
+    has_many :kits, through: :sounds_per_kits
 
 end

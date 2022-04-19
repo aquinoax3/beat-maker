@@ -3,6 +3,7 @@ class SoundsController < ApplicationController
 
   # GET /sounds
   def index
+    # byebug
     @sounds = Sound.all
 
     render json: @sounds
@@ -46,6 +47,6 @@ class SoundsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sound_params
-      params.fetch(:sound, {})
+      params.permit(:name, :sound, :key)
     end
 end
