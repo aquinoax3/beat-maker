@@ -1,6 +1,5 @@
 class BeatSerializer < ActiveModel::Serializer
-  attributes :id, :sound_id, :user_id, :beatname
-  has_one :sound
+  attributes :id, :user_id, :name
   has_one :user
 
 end

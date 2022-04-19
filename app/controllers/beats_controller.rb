@@ -46,6 +46,6 @@ class BeatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def beat_params
-      params.fetch(:beat, {})
+      params.permit(:id, :user_id, :name)
     end
 end

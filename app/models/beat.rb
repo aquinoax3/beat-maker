@@ -1,6 +1,3 @@
 class Beat < ApplicationRecord
-
-    belongs_to :user
-    belongs_to :sound
-    
+    belongs_to :user  
 end
