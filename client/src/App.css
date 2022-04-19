@@ -40,8 +40,8 @@
 
 /* nav bar */
 .navbar {
-  display: grid;
-  grid-template: "a a a a" 10vh;
+  /* display: flex;
+  grid-template: "a a a a" 10vh; */
   background-color: #afafb1;
 }
 
