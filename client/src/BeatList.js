@@ -6,7 +6,7 @@ import "./App.css";
 // import kick08 from './kick08.mp3'
 
 
-function BeatList(slap) {
+function BeatList({slap}) {
   // console.log("Each slap:", slap)
   // console.log("Slap sound:", slap.slap.sound)
 
@@ -16,7 +16,7 @@ function BeatList(slap) {
 		setPlaying(true);
 
     // console.log("Sound in terminal:", slap.slap.sound)
-		new Audio(slap.slap.sound).play();
+		new Audio(slap.sound).play();
 
 		setTimeout(() => {
 			setPlaying(false);
@@ -26,8 +26,8 @@ function BeatList(slap) {
 	useEffect(() => {
 		document.addEventListener("keydown", (e) => {
       // console.log("Key pressed:", e.key)
-      // console.log("Key pressed:", slap.slap.key)
-			if (e.key.toLowerCase() === slap.slap.key.toLowerCase()) {
+      // console.log("Key pressed:", slap.slap.key)a
+			if (e.key.toLowerCase() === slap.key.toLowerCase()) {
 				play();
 			}
 		});
@@ -43,7 +43,7 @@ function BeatList(slap) {
 
     return(
       <button onClick={play}>
-        {slap.slap.key}
+        {slap.key}
 		  </button>
   );
 }
