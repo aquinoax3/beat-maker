@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Authorize() {
+function Authorize({setCurrentUser}) {
+    const  [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const [login, setLogin] = useState("")
+    const [errors, setErrors] = useState([])
 
-    function onSubmit(e){
+    function handleSubmit(e){
         e.preventDefault()
         const user = {
-            // username,
-            // password
+            username,
+            password
         }
         fetch(`/users`, {
             method: "POST",
@@ -22,20 +26,21 @@ function Authorize() {
         .catch((error) => {
             console.error("Error:", error)
         })
-
     }
 
     return(
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit}>
             <label>
                 Username:
-                <input type="text"name="username" />
+                <input type="text" value={ username } name="username" onChange={(e) => setUsername(e.target.value)} />
             </label>
             <label>
                 Password:
-                <input type="password" name="password" />
+                <input type="password" value={ password } name="password" onChange={(e) => setPassword(e.target.value)} />
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Login" onClick={() => console.log("Login Clicked")} />
+            <br/>
+            <input type="submit" value="Signup" onClick={() => console.log("Sign Up Clicked")} />
         </form>
     )
 

@@ -6,9 +6,9 @@ import "./App.css";
 // import kick08 from './kick08.mp3'
 
 
-function Homepage(slap) {
-  // console.log("Each slap:", slap)
-  // console.log("Slap sound:", slap.slap.sound)
+function Homepage({slap}) {
+  console.log("Each slap:", slap)
+  console.log("Slap sound:", slap.sound)
 
   const [playing, setPlaying] = useState(true);
 
@@ -16,7 +16,7 @@ function Homepage(slap) {
 		setPlaying(true);
 
     // console.log("Sound in terminal:", slap.slap.sound)
-		new Audio(slap.slap.sound).play();
+		new Audio(slap.sound).play();
 
 		setTimeout(() => {
 			setPlaying(false);
@@ -27,7 +27,7 @@ function Homepage(slap) {
 		document.addEventListener("keydown", (e) => {
       // console.log("Key pressed:", e.key)
       // console.log("Key pressed:", slap.slap.key)
-			if (e.key.toLowerCase() === slap.slap.key.toLowerCase()) {
+			if (e.key.toLowerCase() === slap.key.toLowerCase()) {
 				play();
 			}
 		});
@@ -43,7 +43,7 @@ function Homepage(slap) {
 
     return(
       <button onClick={play}>
-        {slap.slap.key}
+        {slap.key}
 		  </button>
   );
 }

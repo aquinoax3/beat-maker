@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
 import Homepage from "./Homepage";
 import NavBar from "./Navbar";
 import Authorize from "./Authorize"
 
 function App() {
+
 
   const [sounds, setSounds] = useState([
     {
