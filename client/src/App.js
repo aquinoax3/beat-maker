@@ -23,9 +23,12 @@ function App() {
     })
   },[])
 
-  // console.log(currentUser)
-  // if(!currentUser) 
+
+  //Fix This to proper route
+  console.log(currentUser)
+  if(!currentUser) 
   // return <Home setCurrentUser={setCurrentUser} />
+  console.log("not logged in")
 
   
   return (
@@ -39,12 +42,12 @@ function App() {
           <Beats />
         </Route>
 
-        {/* <Route exact path="/signup">
+        <Route exact path="/signup">
           <SignUp />
-        </Route> */}
+        </Route>
         <Route exact path="/login">
-          <Login />
-          </Route>
+          <Login setCurrentUser={setCurrentUser} />
+        </Route>
 
         <Route exact path="/kits">
           <Kits />

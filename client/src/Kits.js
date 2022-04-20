@@ -1,29 +1,33 @@
 import React, { useEffect, useState } from "react";
 import KitCard from './KitCard';
+import AddKit from "./AddKit";
 
 function Kits() {
 
     const [kits, setKits] = useState([])
 
     useEffect (() => {
-      fetch('/users')
+
+      fetch('/users/{:id}')
       .then(resp => resp.json())
       .then(kitsData => {
-          console.log(kitsData)
-        //   setSounds(samples);
+        //   console.log(kitsData.kits)
+          setKits(kitsData.kits);
       })
   }, []);
 
-    // const mapSounds = kits.map((slap) => {
-    //     return (
-    //       <KitCard key={slap.key} slap={slap} />
-    //     )
-    //   })
+    console.log("here are the kits", kits)
+    const mapKits = kits.map((kit) => {
+        return (
+          <KitCard key={kit.id} kit={kit} active={true} user={kit.user_id}/>
+        )
+      })
 
     return (  
         <div>
             <h2>Kits</h2>
-            {/* <KitCard /> */}
+                {mapKits}
+            {/* <AddKit /> */}
         </div>
     );
 }
