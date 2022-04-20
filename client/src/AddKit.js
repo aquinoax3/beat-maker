@@ -1,19 +1,14 @@
 import React, {useState} from 'react'
 
-function AddKit() {
+function AddKit({user, kits}) {
     const [formData, setFormData] = useState({
-<<<<<<< HEAD
-        name: ""
-    })
-=======
         user_id: "",
         name: ""
-
     })
     
     const [error,setError] = useState("")
 
-    console.log(kit.user_id)
+    console.log("user in Add Kit", user.id)
 
     
     
@@ -35,7 +30,7 @@ function AddKit() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                user_id: formData.user_id,
+                user_id: user.id,
                 name: formData.name
                 // sound: formData.sound,
                 // key: formData.key
@@ -60,7 +55,6 @@ function AddKit() {
             [event.target.name]: event.target.value
         });
     }
->>>>>>> 31b6b0938b1b25298e4431b318980b169434db33
 
     return (
         <div>AddKit
