@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
 
   # route to stay logged in 
-  get "/me", to: "users#show"
+  get "/auth", to: "users#show"
 
   # route for creating user login
   post "/login", to: "sessions#create"

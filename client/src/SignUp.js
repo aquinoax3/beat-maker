@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-function Authorize({setCurrentUser}) {
-    const  [username, setUsername] = useState("")
+function SignUp({setCurrentUser}) {
+    
+    const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [login, setLogin] = useState("")
+    const [signup, setSignup] = useState("")
     const [errors, setErrors] = useState([])
 
     function handleSubmit(e){
@@ -40,10 +41,10 @@ function Authorize({setCurrentUser}) {
             </label>
             <input type="submit" value="Login" onClick={() => console.log("Login Clicked")} />
             <br/>
-            <input type="submit" value="Signup" onClick={() => console.log("Sign Up Clicked")} />
+            <input type="submit" value="Signup" onClick={() => setSignup(true)} />
         </form>
     )
 
 }
 
-export default Authorize; 
+export default SignUp; 

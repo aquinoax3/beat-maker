@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    @user = set_user
+    @user = User.find(session[:user_id])
     
     if @user
       render json: @user, status: :ok

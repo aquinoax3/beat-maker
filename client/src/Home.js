@@ -1,5 +1,5 @@
 import React from 'react';
-import Authorize from './Authorize';
+import SignUp from './SignUp';
 
 
 function Home() {
@@ -9,8 +9,8 @@ function Home() {
                 <div className='home-pic'> </div>
                 <h1 className="welcome-home-page">Welcome to BeatMaker</h1>
                 <p className="welcome-future"> The Future of Beats</p>
-                <p className="welcome-log-in"> Log-in below and drop that heat</p>
-                <Authorize />
+                <p className="welcome-log-in"> Log-in/Sign Up below and drop that heat</p>
+                <SignUp />
             </div> 
         </div> 
     );
