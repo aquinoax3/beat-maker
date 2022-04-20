@@ -27,8 +27,8 @@ function App() {
   //Fix This to proper route
   console.log(currentUser)
   if(!currentUser) 
-  console.log("Not logged in")
-  // /return <Home setCurrentUser={setCurrentUser} />
+  // return <Home setCurrentUser={setCurrentUser} />
+  console.log("not logged in")
 
   
   return (

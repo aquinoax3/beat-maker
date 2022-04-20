@@ -15,9 +15,9 @@ class KitsController < ApplicationController
 
   # POST /kits
   def create
-    @kit = Kit.new(kit_params)
+    @kit = Kit.create!(name: params[:name], user_id: params[:user_id])
 
-    if @kit.save
+    if @kit
       render json: @kit, status: :created, location: @kit
     else
       render json: @kit.errors, status: :unprocessable_entity
@@ -46,6 +46,6 @@ class KitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kit_params
-      params.permits(:name, :user_id)
+      params.permit(:name, :user_id)
     end
 end

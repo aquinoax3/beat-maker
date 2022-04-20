@@ -7,6 +7,7 @@ function Kits() {
     const [kits, setKits] = useState([])
 
     useEffect (() => {
+
       fetch('/users/{:id}')
       .then(resp => resp.json())
       .then(kitsData => {
