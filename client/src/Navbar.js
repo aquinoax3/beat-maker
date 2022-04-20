@@ -2,7 +2,22 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom"
 
-function NavBar() {
+function NavBar({setCurrentUser}) {
+
+  function handleLogoutClick(){
+    fetch("/logout", { method: "DELETE"}).then((r) => {
+        if (r.ok) {
+            // console.log(r)
+            setCurrentUser(null);
+        }
+    });
+}
+
+
+
+
+
+
   return (
     <nav className="navbar">
 
@@ -14,6 +29,9 @@ function NavBar() {
         <div className="navbar-links">
             <NavLink exact to="/">Home</NavLink>
             <NavLink to="/beats">Beats</NavLink>
+            <NavLink to="/signup">Signup</NavLink>
+            <NavLink to="/login">Login</NavLink>
+            <button onClick={handleLogoutClick}>Logout</button>
         </div>
       </div>
     </nav>

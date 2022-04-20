@@ -39,7 +39,7 @@ function Beats() {
             <h2>Beats</h2>
             <div>{mapSounds}</div>
         </div>
-     );
+    );
 }
 
 export default Beats;
