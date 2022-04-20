@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Login() {
+function Login({setCurrentUser}) {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -29,7 +29,18 @@ function Login() {
         })
     }
 
+    function handleLogoutClick(){
+        fetch("/logout", { method: "DELETE"}).then((r) => {
+            if (r.ok) {
+                // console.log(r)
+                setCurrentUser(null);
+                // routes you back to home
+            }
+        });
+    }
+
     return(
+        <div>
         <form onSubmit={handleSubmit}>
             <label>
                 Username:
@@ -41,8 +52,9 @@ function Login() {
             </label>
             <input type="submit" value="Login" onClick={() => setLogin(true)} />
             <br/>
-            <input type="submit" value="Signup" onClick={() => console.log("Signup Clicked")} />
         </form>
+        <button onClick={handleLogoutClick}>Logout</button>
+        </div>
     )
 
 }

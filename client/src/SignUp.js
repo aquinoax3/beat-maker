@@ -39,7 +39,6 @@ function SignUp({setCurrentUser}) {
                 Password:
                 <input type="password" value={ password } name="password" onChange={(e) => setPassword(e.target.value)} />
             </label>
-            <input type="submit" value="Login" onClick={() => console.log("Login Clicked")} />
             <br/>
             <input type="submit" value="Signup" onClick={() => setSignup(true)} />
         </form>

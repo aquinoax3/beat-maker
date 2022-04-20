@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import KitCard from './KitCard';
+import AddKit from "./AddKit";
 
 function Kits() {
 
@@ -24,6 +25,7 @@ function Kits() {
         <div>
             <h2>Kits</h2>
             {/* <KitCard /> */}
+            <AddKit />
         </div>
     );
 }
