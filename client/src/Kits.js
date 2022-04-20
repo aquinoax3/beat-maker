@@ -7,13 +7,13 @@ function Kits() {
     const [kits, setKits] = useState([])
 
     useEffect (() => {
-      fetch('/users')
-      .then(resp => resp.json())
-      .then(kitsData => {
-          console.log(kitsData)
+        fetch('/users')
+        .then(resp => resp.json())
+        .then(kitsData => {
+        console.log(kitsData)
         //   setSounds(samples);
-      })
-  }, []);
+        })
+    }, []);
 
     // const mapSounds = kits.map((slap) => {
     //     return (

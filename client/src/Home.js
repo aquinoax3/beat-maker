@@ -3,6 +3,10 @@ import SignUp from './SignUp';
 
 
 function Home() {
+
+
+
+
     return ( 
         <div >
             <div className="hp-image">
