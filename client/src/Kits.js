@@ -7,25 +7,27 @@ function Kits() {
     const [kits, setKits] = useState([])
 
     useEffect (() => {
-        fetch('/users')
-        .then(resp => resp.json())
-        .then(kitsData => {
-        console.log(kitsData)
-        //   setSounds(samples);
-        })
-    }, []);
 
-    // const mapSounds = kits.map((slap) => {
-    //     return (
-    //       <KitCard key={slap.key} slap={slap} />
-    //     )
-    //   })
+      fetch('/users/{:id}')
+      .then(resp => resp.json())
+      .then(kitsData => {
+        //   console.log(kitsData.kits)
+          setKits(kitsData.kits);
+      })
+  }, []);
+
+    console.log("here are the kits", kits)
+    const mapKits = kits.map((kit) => {
+        return (
+          <KitCard key={kit.id} kit={kit} active={true} user={kit.user_id}/>
+        )
+      })
 
     return (  
         <div>
             <h2>Kits</h2>
-            {/* <KitCard /> */}
-            <AddKit />
+                {mapKits}
+            {/* <AddKit /> */}
         </div>
     );
 }

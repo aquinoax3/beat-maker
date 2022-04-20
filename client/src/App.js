@@ -47,7 +47,7 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login setCurrentUser={setCurrentUser} />
-          </Route>
+        </Route>
 
         <Route exact path="/kits">
           <Kits />
