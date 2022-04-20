@@ -27,7 +27,8 @@ function App() {
   //Fix This to proper route
   console.log(currentUser)
   if(!currentUser) 
-  return <Home setCurrentUser={setCurrentUser} />
+  console.log("Not logged in")
+  // /return <Home setCurrentUser={setCurrentUser} />
 
   
   return (
@@ -46,7 +47,7 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login setCurrentUser={setCurrentUser} />
-          </Route>
+        </Route>
 
         <Route exact path="/kits">
           <Kits />

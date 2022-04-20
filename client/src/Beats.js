@@ -2,9 +2,16 @@ import React, { useEffect, useState } from "react";
 import BeatList from "./BeatList";
 
 
-function Beats() {
+function Beats({beatsInKit}) {
 
-    const [sounds, setSounds] = useState([])
+  // const [sounds, setSounds] = useState([])
+  console.log("beats in kit", beatsInKit)
+
+  // function handleBeatsInKit () {
+  //   setSounds(beatsInKit)
+  // }
+
+  // console.log("beatsinkit in sounds state", sounds)
 
   //   useEffect (() => {
   //     fetch('/sounds')
@@ -28,15 +35,16 @@ function Beats() {
     //   },
     // ]);
   
-    const mapSounds = sounds.map((slap) => {
+    const mapSounds = beatsInKit.map((slap) => {
       return (
-        <BeatList key={slap.key} slap={slap} />
+        // console.log(slap)
+        <BeatList key={slap.id} slap={slap} />
       )
     })
 
     return ( 
         <div>
-            <h2>Beats</h2>
+            {/* <h2>Beats</h2> */}
             <div>{mapSounds}</div>
         </div>
     );
