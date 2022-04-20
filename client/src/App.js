@@ -5,9 +5,10 @@ import "./App.css";
 import Home from "./Home";
 import NavBar from "./Navbar";
 import Beats from "./Beats";
+
 import SignUp from "./SignUp"
 import Login from "./Login"
-// import Authorize from "./SignUp"
+import Kits from "./Kits";
 
 function App() {
 
@@ -37,11 +38,16 @@ function App() {
         <Route exact path="/beats">
           <Beats />
         </Route>
+
         <Route exact path="/signup">
           <SignUp />
         </Route>
         <Route exact path="/login">
           <Login />
+
+        <Route exact path="/kits">
+          <Kits />
+
         </Route>
       </Switch>
     </div>

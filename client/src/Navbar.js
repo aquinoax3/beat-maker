@@ -28,6 +28,7 @@ function NavBar({setCurrentUser}) {
       <div className="flexbox-nav">
         <div className="navbar-links">
             <NavLink exact to="/">Home</NavLink>
+            <NavLink to="/kits">Kits</NavLink>
             <NavLink to="/beats">Beats</NavLink>
             <NavLink to="/signup">Signup</NavLink>
             <NavLink to="/login">Login</NavLink>
