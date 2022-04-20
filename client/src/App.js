@@ -39,11 +39,12 @@ function App() {
           <Beats />
         </Route>
 
-        <Route exact path="/signup">
+        {/* <Route exact path="/signup">
           <SignUp />
-        </Route>
+        </Route> */}
         <Route exact path="/login">
           <Login />
+          </Route>
 
         <Route exact path="/kits">
           <Kits />

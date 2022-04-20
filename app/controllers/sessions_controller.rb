@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
-    skip_before_action :authorize, only: [:create]
+    # skip_before_action :authorize, only: [:create]
 
     def create
         # this is where you only LOGIN
         # find user by using username params
         user = User.find_by(username: params[:username])
         
-        if user&.authenticate(:password)
+        if user&.authenticate(params[:password])
             
             # save the user's ID to the session hash
             session[:user_id] = user.id
