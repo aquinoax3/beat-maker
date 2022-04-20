@@ -16,12 +16,15 @@ User.destroy_all
 
 
 puts "🏕 Seeding sounds..."
-sound1 = Sound.create(name: 'Glass-Bottle-1', sound: "./SoundSamples/gas-bottle-perc1.wav", key: "A")
+# sound1 = Sound.create(name: 'Glass-Bottle-1', sound: "./SoundSamples/gas-bottle-perc1.wav", key: "A")
+sound1 = Sound.create(name: 'Hi-Hat-1', sound: "./SoundSamples/hi-hat-058.wav", key: "A")
 sound2 = Sound.create(name: 'Hi-Hat-1', sound: "./SoundSamples/hi-hat-058.wav", key: "S")
 sound3 = Sound.create(name: 'Kick08-1', sound: "./SoundSamples/kick08.wav", key: "D") 
 sound4 = Sound.create(name: 'Old-School-Hip-Hop-Snare-1', sound: "./SoundSamples/oldschool-hip-hop-snare-17.wav", key: "Z") 
-sound5 = Sound.create(name: 'Bass-1', sound: "./SoundSamples/bass.wav", key: "X")
-sound6 = Sound.create(name: 'Clap-1', sound: "./SoundSamples/clap.wav", key: "C")
+sound5 = Sound.create(name: 'Hi-Hat-1', sound: "./SoundSamples/hi-hat-058.wav", key: "X")
+sound6 = Sound.create(name: 'Hi-Hat-1', sound: "./SoundSamples/hi-hat-058.wav", key: "C")
+# sound5 = Sound.create(name: 'Bass-1', sound: "./SoundSamples/bass.wav", key: "X")
+# sound6 = Sound.create(name: 'Clap-1', sound: "./SoundSamples/clap.wav", key: "C")
 sound7 = Sound.create(name: 'Hat-2', sound: "./SoundSamples/hat2.wav", key: "A")
 sound8 = Sound.create(name: 'Hey', sound: "./SoundSamples/hey.wav", key: "S")
 sound9 = Sound.create(name: 'Hi-Hat-1', sound: "./SoundSamples/hihat.wav", key: "D")
@@ -71,12 +74,12 @@ SoundsPerKit.create(sound: sound17, kit: kit3)
 SoundsPerKit.create(sound: sound18, kit: kit3)
 puts "kit three created"
 
-SoundsPerKit.create(sound: sound1, kit: kit3)
-SoundsPerKit.create(sound: sound2, kit: kit3)
-SoundsPerKit.create(sound: sound3, kit: kit3)
-SoundsPerKit.create(sound: sound16, kit: kit3)
-SoundsPerKit.create(sound: sound17, kit: kit3)
-SoundsPerKit.create(sound: sound18, kit: kit3)
+SoundsPerKit.create(sound: sound1, kit: kit4)
+SoundsPerKit.create(sound: sound2, kit: kit4)
+SoundsPerKit.create(sound: sound3, kit: kit4)
+SoundsPerKit.create(sound: sound16, kit: kit4)
+SoundsPerKit.create(sound: sound17, kit: kit4)
+SoundsPerKit.create(sound: sound18, kit: kit4)
 puts "kit four created"
 
 puts "🏕 Seeding beats..."
