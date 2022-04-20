@@ -5,7 +5,6 @@ function AddKit() {
         name: ""
     })
 
-     
     return (
         <div>AddKit</div>
     )
