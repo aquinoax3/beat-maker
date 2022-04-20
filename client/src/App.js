@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./Home";
 import NavBar from "./Navbar";
 import Beats from "./Beats";
+import Kits from "./Kits";
 import Authorize from "./Authorize"
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/beats">
           <Beats />
+        </Route>
+        <Route exact path="/kits">
+          <Kits />
         </Route>
       </Switch>
     </div>

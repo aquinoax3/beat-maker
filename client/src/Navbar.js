@@ -13,6 +13,7 @@ function NavBar() {
       <div className="flexbox-nav">
         <div className="navbar-links">
             <NavLink exact to="/">Home</NavLink>
+            <NavLink to="/kits">Kits</NavLink>
             <NavLink to="/beats">Beats</NavLink>
         </div>
       </div>
