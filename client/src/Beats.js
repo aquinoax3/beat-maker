@@ -6,13 +6,13 @@ function Beats() {
 
     const [sounds, setSounds] = useState([])
 
-    useEffect (() => {
-      fetch('http://localhost:3000/kits')
-      .then(resp => resp.json())
-      .then(houseData => {
-          setSounds(houseData);
-      })
-  }, []);
+  //   useEffect (() => {
+  //     fetch('/sounds')
+  //     .then(resp => resp.json())
+  //     .then(samples => {
+  //         setSounds(samples);
+  //     })
+  // }, []);
 
     //   {
     //     name: "kick",

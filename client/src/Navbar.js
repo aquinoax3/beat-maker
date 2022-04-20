@@ -30,7 +30,7 @@ function NavBar({setCurrentUser}) {
             <NavLink exact to="/">Home</NavLink>
             <NavLink to="/kits">Kits</NavLink>
             <NavLink to="/beats">Beats</NavLink>
-            <NavLink to="/signup">Signup</NavLink>
+            {/* <NavLink to="/signup">Signup</NavLink> */}
             <NavLink to="/login">Login</NavLink>
             <button onClick={handleLogoutClick}>Logout</button>
         </div>
