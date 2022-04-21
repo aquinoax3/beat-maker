@@ -26,6 +26,7 @@ function KitDisplay() {
     
     function addKit (addKitToMyKits) {
         // create const to check find and not include twice
+        // console.log(addKitToMyKits, "addkittomykits")
         const checkMyBots = myKit.find(function(kit){
           return kit.id === addKitToMyKits.id
         })

@@ -21,9 +21,9 @@ function KitCard ({kit, addKit}) {
         .then(resp => resp.json())
         .then(kitsData => {
             // console.log(kitsData)
-            // setBeatsInKit();
+            // // setBeatsInKit();
             setBeatsInKit(kitsData.sounds);
-            // addKit()
+            addKit(kitsData)
         })
     }
 
@@ -33,11 +33,11 @@ function KitCard ({kit, addKit}) {
     //     setDisplayedKit([kitSounds])
     // }
 
-    function onClicky () {
-        //console.log("This bot clicked:", bot)
-        // addBot(bot)
-        addKit(kit)
-      }
+    // function onClicky () {
+    //     //console.log("This bot clicked:", bot)
+    //     // addBot(bot)
+    //     addKit(kit)
+    //   }
 
     // // const thisKit = useEffect (() => {
     //     fetch('/kits/${kit.id}')
@@ -49,14 +49,16 @@ function KitCard ({kit, addKit}) {
     // }, []);
 
     
-    function deleteClick(event) {
+    function deleteClick(event) {     
         event.preventDefault()
-        // console.log(“delete clicked”)
-        fetch(`/users/${kit.id}`,{
+        // console.log("delete clicked")
+        fetch(`/kits/${kit.id}`,{
             method: "DELETE",
         })
         .then(response => response.json())
         .then(jsonData => console.log("data:", kit))
+        // const removekit = kit.filter(data => data.id !== kit.id)
+        // setDeleteKit(removekit)
     }
 
     
@@ -64,8 +66,8 @@ function KitCard ({kit, addKit}) {
         <div className="kit-card" >
             {/* <a href="http://localhost:4000/sounds" onClick={(event) => clickKit(event)} className="kit-name" >{kit.name}</a> */}
             <h1 onClick={(event) => clickKit(event)} className="kit-name" >{kit.name}</h1>
-            <h2 onClick={() => onClicky(kit)} >Click on this Div</h2>
-            <Sounds beatsInKit={beatsInKit}/>
+            {/* <h2 onClick={() => onClicky(kit)} >Click on this Div</h2> */}
+            {/* <Sounds beatsInKit={beatsInKit}/> */}
             <p>Delete Your Kit Below</p>
             <button onClick={deleteClick}>Delete</button>
         </div>
