@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Beats from "./Beats";
+import Sounds from "./Sounds";
 
 
 
 function KitCard ({kit, handleClickKit}) {
     const [beatsInKit, setBeatsInKit] = useState([]);
+    const [displayedKit, setDisplayedKit] = useState([]);
+
     // console.log("kit", kit)
-    console.log("kit sounds data", beatsInKit)
+    // console.log("kit sounds data", beatsInKit)
+    console.log("kit displayed", displayedKit)
 
     function clickKit (event) {
         // handleClickKit(kit);
@@ -19,12 +22,14 @@ function KitCard ({kit, handleClickKit}) {
             // console.log(kitsData)
             // setBeatsInKit();
             setBeatsInKit(kitsData.sounds);
+            // handleDisplayedKit(kitsData)
         })
     }
 
-    // function handleSoundsInKit (kitSounds) {
+
+    // function handleDisplayedKit (kitSounds) {
     //     // console.log("this is new review:", newReview)
-    //     setBeatsInKit([kitSounds])
+    //     setDisplayedKit([kitSounds])
     // }
 
     // // const thisKit = useEffect (() => {
@@ -37,13 +42,24 @@ function KitCard ({kit, handleClickKit}) {
     // }, []);
 
     
+    function deleteClick(event) {
+        event.preventDefault()
+        // console.log(“delete clicked”)
+        fetch(`/users/${kit.id}`,{
+            method: "DELETE",
+        })
+        .then(response => response.json())
+        .then(jsonData => console.log("data:", kit))
+    }
+
+    
     return (
         <div className="kit-card" >
             {/* <a href="http://localhost:4000/sounds" onClick={(event) => clickKit(event)} className="kit-name" >{kit.name}</a> */}
             <h1 onClick={(event) => clickKit(event)} className="kit-name" >{kit.name}</h1>
-            <Beats beatsInKit={beatsInKit}/>
+            <Sounds beatsInKit={beatsInKit}/>
             <p>Delete Your Kit Below</p>
-            <button>Delete</button>
+            <button onClick={deleteClick}>Delete</button>
         </div>
     )
 }

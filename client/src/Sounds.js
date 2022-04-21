@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import BeatList from "./BeatList";
 
 
-function Beats({beatsInKit}) {
+function Sounds({beatsInKit}) {
 
   // const [sounds, setSounds] = useState([])
   console.log("beats in kit", beatsInKit)
@@ -50,4 +50,4 @@ function Beats({beatsInKit}) {
     );
 }
 
-export default Beats;
+export default Sounds;
