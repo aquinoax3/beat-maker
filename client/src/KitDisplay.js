@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import "./App.css";
 import Kits from "./Kits";
 import KitMaker from "./KitMaker";
 
@@ -38,10 +39,10 @@ function KitDisplay() {
     //   console.log("my kit", myKit)
 
     return (  
-        <div>
+        <div className="overall-div">
             <div className ="kit-selection">
                 <h1>Kit Selection</h1>
-                <Kits kits={kits} user={user} addKit={addKit}/>
+                <Kits setKits={setKits} kits={kits} user={user} addKit={addKit}/>
             </div>
 
             <div className ="kit-maker">

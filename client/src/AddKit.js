@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function AddKit({user, kits}) {
+function AddKit({user, kits, setKits}) {
     const [formData, setFormData] = useState({
         user_id: "",
         name: ""
@@ -43,6 +43,7 @@ function AddKit({user, kits}) {
                 // sound: "",
                 // key:""
             })
+            setKits([...kits, formData])
             alert("Added sound to kit");
             //handle add Kits below to add into state above
         

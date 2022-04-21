@@ -4,7 +4,7 @@ import Sounds from "./Sounds";
 
 
 
-function KitCard ({kit, addKit}) {
+function KitCard ({kit, addKit, setKits, kits}) {
     const [beatsInKit, setBeatsInKit] = useState([]);
     const [displayedKit, setDisplayedKit] = useState([]);
 
@@ -57,8 +57,8 @@ function KitCard ({kit, addKit}) {
         })
         .then(response => response.json())
         .then(jsonData => console.log("data:", kit))
-        // const removekit = kit.filter(data => data.id !== kit.id)
-        // setDeleteKit(removekit)
+        const removekit = kits.filter(data => data.id !== kit.id)
+        setKits(removekit)
     }
 
     
@@ -68,7 +68,7 @@ function KitCard ({kit, addKit}) {
             <h1 onClick={(event) => clickKit(event)} className="kit-name" >{kit.name}</h1>
             {/* <h2 onClick={() => onClicky(kit)} >Click on this Div</h2> */}
             {/* <Sounds beatsInKit={beatsInKit}/> */}
-            <p>Delete Your Kit Below</p>
+            <p className="delete-line">Delete Your Kit Below</p>
             <button onClick={deleteClick}>Delete</button>
         </div>
     )
