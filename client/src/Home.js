@@ -15,6 +15,9 @@ function Home() {
                 <p className="welcome-future"> The Future of Beats</p>
                 <p className="welcome-log-in">Sign Up below and drop that heat</p>
                 <SignUp />
+                <div className="img_hold">
+                <img className="recordz" src="https://thumbs.gfycat.com/AntiqueWellgroomedAlaskanhusky-size_restricted.gif" alt="record"></img>
+                </div>
             </div> 
         </div> 
     );

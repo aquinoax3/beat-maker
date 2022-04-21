@@ -11,7 +11,7 @@ html {
 
 .App {
   text-align: left;
-  
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .App-logo {
@@ -53,29 +53,82 @@ html {
 .navbar {
   /* display: flex;
   grid-template: "a a a a" 10vh; */
-  background-color: #afafb1;
+  background-color: transparent;
+
   
 }
 
 .navbar-header{
   display: flex;
   justify-content: center;
+  color: blue
 }
 
 .navbar-links{
   display: flex;
   justify-content: space-around;
   font-size: larger;
-  
-  
 }
+
+.navbar-links > a{
+  color: #c8c4c3;
+}
+
+.navbar-links > a:active{
+  color: #c8c4c3;
+}
+
+.navbar-header > h1 {
+  color: #01d1f6
+}
+
+/* home page */
+
+.welcome-home-page{
+  color: #01d1f6;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center
+}
+
+.welcome-future {
+  display: flex;
+  justify-content: center;
+  color: #c8c4c3;
+}
+
+.welcome-log-in{
+  display: flex;
+  justify-content: center;
+  color: #c8c4c3;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  color: #c8c4c3;
+}
+
+
+
 
 
 /* added styling for Homepage */
 
-img{
-  height: 100%;
-  width: 100%;
+.hp-image{
+  color:white
+}
+
+.kit-selection{
+  color:white
+}
+
+.form{
+  color:white
+}
+
+.your-kit-sounds{
+  color: white
 }
 
 .homepage {
@@ -83,15 +136,30 @@ img{
   /* grid-template:
     "a a" 45vh
     "b b" 45vh; */
-  background-color: #8c8d8f;
+  background-color: #8c8d8f;}
 
+  .recordz {
+    justify-content: center;
+    height: 35%;
+    width: auto;
+  }
+
+  .img_hold {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .kit-title{
+    color:#01d1f6
+  }
   /* .homepage {
   display: grid;
   grid-template:
     "a a" 45vh
     "b b" 45vh;
   background-color: #8c8d8f; */
-}
+
 
 /* grid-template:
     "a a a" 40vh 40vw
@@ -100,7 +168,7 @@ img{
     "b c c" 15vh; */
 
     body{
-      font-family:sans-serif;
+      font-family: helvetica;
     }
     
     .submission-form{
@@ -138,4 +206,62 @@ img{
       /* &:hover{
         background:#3498DB;
       } */
-    }
+  }
+
+    /* here's my Matt code */
+.overall-div{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+    .kit-selection{
+  width: 50%;
+  height: 100%
+  /* display: flex;
+  align-items: ; */
+  /* height: 100vh; */
+
+  /* grid-template: */
+    /* "a a" 45vh  */
+}
+
+.kit-maker{
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.sounds-container {
+  /* background-color: #8c8d8f; */
+  align-items: center;
+  justify-content: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /* width: 50vw;
+  height: 50vh; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sounds-display {
+  background-color: #8c8d8f;
+  /* width: 50vw;
+  height: 50vh; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vw;
+}
+
+.each-sound {
+  border: 2px solid #343050;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: white;
+  box-shadow: 0px 10px 10px rgba(4,3,1,2);
+  height: 10vh;
+  width: 10vw;
+  margin: 2vw;
+}
+

@@ -41,9 +41,9 @@ function BeatList({slap}) {
   // } 
 
     return(
-      <button onClick={play}>
+      <div className="each-sound" onClick={play}>
         {slap.key}
-		  </button>
+		  </div>
   );
 }
 

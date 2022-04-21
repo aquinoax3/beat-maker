@@ -43,9 +43,10 @@ function Sounds({beatsInKit}) {
     })
 
     return ( 
-        <div>
-            {/* <h2>Beats</h2> */}
-            <div>{mapSounds}</div>
+        <div className="sounds-container">
+            <div className="sounds-display">
+              {mapSounds}
+            </div>
         </div>
     );
 }
