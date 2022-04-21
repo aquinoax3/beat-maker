@@ -6,9 +6,9 @@ function AddKit({user, kits}) {
         name: ""
     })
     
-    const [error,setError] = useState("")
+    // const [error,setError] = useState("")
 
-    console.log("user in Add Kit", user.id)
+    // console.log("user in Add Kit", user.id)
 
     
     
@@ -64,12 +64,6 @@ function AddKit({user, kits}) {
                 <label>Name:
                     <input type="text" name="name" placeholder="Choose a name" onChange={handleChange} />
                 </label>
-                {/* <label>Sound:
-                    <input type="text" name="sound" placeholder="Choose a sound"/>
-                </label>
-                <label>Key:
-                    <input type="text" name="key" placeholder="Assign a key" />
-                </label> */}
                 <input type="submit" />
             </form>
         </div>
