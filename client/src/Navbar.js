@@ -16,10 +16,11 @@ function NavBar() {
       <div className="flexbox-nav">
         <div className="navbar-links">
             <NavLink exact to="/">Home</NavLink>
-            <NavLink to="/kitdisplay">Kit Display</NavLink>
-            {/* <NavLink to="/sounds">Sounds</NavLink> */}
-            {/* <NavLink to="/signup">Signup</NavLink> */}
             <NavLink to="/login">Login</NavLink>
+            <NavLink to="/profile">Profile</NavLink>
+            <NavLink to="/kitdisplay">Kit Display</NavLink>
+            {/* <NavLink to="/signup">Signup</NavLink> */}
+            
         </div>
       </div>
     </nav>

@@ -6,7 +6,8 @@ function Login({setCurrentUser}) {
     const [password, setPassword] = useState("")
     const [login, setLogin] = useState("")
     const [errors, setErrors] = useState([])
-
+    
+    
     function handleSubmit(e){
         e.preventDefault()
         const user = {

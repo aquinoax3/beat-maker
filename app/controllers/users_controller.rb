@@ -45,9 +45,9 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-    @user = set_user
+    # @user = set_user
     @user.destroy
-    head :no_content
+    # head :no_content
   end
 
   private

@@ -13,7 +13,7 @@ function AddKit({user, kits, setKits}) {
     
     
     function handleSubmit(event){
-        event.preventDefault()
+        // event.preventDefault()
         console.log("clicked")
         console.log("form data",formData)
         

@@ -6,6 +6,7 @@ import Home from "./Home";
 import NavBar from "./Navbar";
 import Beats from "./Sounds";
 import KitDisplay from "./KitDisplay";
+import Profile from "./Profile";
 
 import SignUp from "./SignUp"
 import Login from "./Login"
@@ -53,6 +54,10 @@ function App() {
 
         <Route exact path="/kitdisplay">
           <KitDisplay />
+        </Route>
+
+        <Route exact path="/profile">
+          <Profile />
         </Route>
       </Switch>
     </div>
