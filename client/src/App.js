@@ -4,11 +4,12 @@ import {Route, Switch, BrowswerRouter as Router } from "react-router-dom"
 import "./App.css";
 import Home from "./Home";
 import NavBar from "./Navbar";
-import Beats from "./Beats";
+import Beats from "./Sounds";
 
 import SignUp from "./SignUp"
 import Login from "./Login"
 import Kits from "./Kits";
+import KitDropDown from "./KitDropDown";
 
 function App() {
 
@@ -38,8 +39,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/beats">
-          <Beats />
+        <Route exact path="/sounds">
+          <KitDropDown />
         </Route>
 
         <Route exact path="/signup">

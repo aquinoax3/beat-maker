@@ -44,6 +44,7 @@ function AddKit({user, kits}) {
                 // key:""
             })
             alert("Added sound to kit");
+            //handle add Kits below to add into state above
         
         
     }
