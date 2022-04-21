@@ -7,13 +7,15 @@ function SignUp({setCurrentUser}) {
     const [signup, setSignup] = useState("")
     const [errors, setErrors] = useState([])
 
+
     function handleSubmit(e){
         e.preventDefault()
         const user = {
             username,
             password
         }
-        fetch(`/users`, {
+
+        fetch(`/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

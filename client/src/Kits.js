@@ -18,8 +18,8 @@ function Kits() {
       })
   }, []);
 
-    console.log("here are the kits", kits)
-    console.log("here are the user", user)
+    // console.log("here are the kits", kits)
+    // console.log("here are the user", user)
 
     const mapKits = kits.map((kit) => {
         return (

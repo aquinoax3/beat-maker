@@ -3,7 +3,7 @@ import Beats from "./Beats";
 
 
 
-function KitCard ({kit, handleClickKit}) {
+function KitCard ({kit, handleClickKit, user}) {
     const [beatsInKit, setBeatsInKit] = useState([]);
     // console.log("kit", kit)
     console.log("kit sounds data", beatsInKit)
@@ -20,6 +20,17 @@ function KitCard ({kit, handleClickKit}) {
             // setBeatsInKit();
             setBeatsInKit(kitsData.sounds);
         })
+    }
+
+    function deleteClick(event) {
+        event.preventDefault()
+        // console.log("delete clicked")
+        fetch(`/users/${kit.id}`,{
+            method: "DELETE",
+        })
+        .then(response => response.json())
+        .then(jsonData => console.log("data:", kit))
+
     }
 
     // function handleSoundsInKit (kitSounds) {
@@ -43,7 +54,7 @@ function KitCard ({kit, handleClickKit}) {
             <h1 onClick={(event) => clickKit(event)} className="kit-name" >{kit.name}</h1>
             <Beats beatsInKit={beatsInKit}/>
             <p>Delete Your Kit Below</p>
-            <button>Delete</button>
+            <button onClick={deleteClick} >Delete</button>
         </div>
     )
 }

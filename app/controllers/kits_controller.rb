@@ -35,7 +35,9 @@ class KitsController < ApplicationController
 
   # DELETE /kits/1
   def destroy
+    @kit
     @kit.destroy
+    head :no_content
   end
 
   private

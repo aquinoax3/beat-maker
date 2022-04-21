@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :sounds
 
   
-
+  # route to sign update
+  post "/signup", to: "users#create"
   # route to stay logged in 
   get "/auth", to: "users#show"
 

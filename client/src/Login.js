@@ -30,9 +30,11 @@ function Login({setCurrentUser}) {
     }
 
     function handleLogoutClick(){
-        fetch("/logout", { method: "DELETE"}).then((r) => {
+        fetch("/logout", 
+        { method: "DELETE"})
+        .then((r) => {
             if (r.ok) {
-                // console.log(r)
+                console.log(r)
                 setCurrentUser(null);
                 // routes you back to home
             }
