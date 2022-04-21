@@ -1,6 +1,17 @@
 /* standard css styling for app from react */
+
+html { 
+  background: url(https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWMlMjBzdHVkaW98ZW58MHx8MHx8&w=1000&q=80) no-repeat center top fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* filter: blur(8px) */
+}
+
 .App {
-  text-align: center;
+  text-align: left;
+  
 }
 
 .App-logo {
@@ -43,9 +54,29 @@
   /* display: flex;
   grid-template: "a a a a" 10vh; */
   background-color: #afafb1;
+  
 }
 
+.navbar-header{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-links{
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+  
+  
+}
+
+
 /* added styling for Homepage */
+
+img{
+  height: 100%;
+  width: 100%;
+}
 
 .homepage {
   display: flex;
