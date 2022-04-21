@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./Home";
 import NavBar from "./Navbar";
 import Beats from "./Sounds";
+import KitDisplay from "./KitDisplay";
 
 import SignUp from "./SignUp"
 import Login from "./Login"
@@ -50,9 +51,8 @@ function App() {
           <Login setCurrentUser={setCurrentUser} />
         </Route>
 
-        <Route exact path="/kits">
-          <Kits />
-
+        <Route exact path="/kitdisplay">
+          <KitDisplay />
         </Route>
       </Switch>
     </div>
