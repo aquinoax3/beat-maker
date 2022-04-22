@@ -49,16 +49,27 @@ function KitCard ({kit, addKit, setKits, kits}) {
     // }, []);
 
     
-    function deleteClick(event) {     
-        event.preventDefault()
-        // console.log("delete clicked")
-        fetch(`/kits/${kit.id}`,{
-            method: "DELETE",
-        })
-        .then(response => response.json())
-        .then(jsonData => console.log("data:", kit))
-        const removekit = kits.filter(data => data.id !== kit.id)
-        setKits(removekit)
+    // function deleteClick(event) {     
+    //     // event.preventDefault()
+    //     // console.log("delete clicked")
+    //     fetch(`/kits/${kit.id}`,{
+    //         method: "DELETE",
+    //     })
+    function deleteClick (kit) {
+        // const kitId = kit.id
+        // console.log(kit)
+            fetch(`/kits/${kit.id}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            // .then(() => {
+            //     setKits(kits.filter(function(currentKit){
+            //       return currentKit.id !== kit.id
+            //     }))})
+            window.location.reload();
+            // .then(jsonData => console.log("data:", kit))
+        // const removekit = kits.filter(data => data.id !== kit.id)
+        // setKits(removekit)
     }
 
     
@@ -69,7 +80,7 @@ function KitCard ({kit, addKit, setKits, kits}) {
             {/* <h2 onClick={() => onClicky(kit)} >Click on this Div</h2> */}
             {/* <Sounds beatsInKit={beatsInKit}/> */}
             <p className="delete-line">Delete Your Kit Below</p>
-            <button onClick={deleteClick}>Delete</button>
+            <button onClick={()=>deleteClick(kit)}>Delete</button>
         </div>
     )
 }

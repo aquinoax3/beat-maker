@@ -9,7 +9,7 @@ import "./App.css";
 function BeatList({slap}) {
   // console.log("Each slap:", slap)
 
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
 
 	const play = () => {
 		setPlaying(true);

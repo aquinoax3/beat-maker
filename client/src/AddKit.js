@@ -13,7 +13,7 @@ function AddKit({user, kits, setKits}) {
     
     
     function handleSubmit(event){
-        event.preventDefault()
+        // event.preventDefault()
         console.log("clicked")
         console.log("form data",formData)
         
@@ -59,15 +59,15 @@ function AddKit({user, kits, setKits}) {
     }
 
     return (
-        <div>AddKit
+        // <div>
             <form onSubmit={handleSubmit}>
-                <h2>Create a kit</h2>
+                {/* <h3>Create a kit</h3> */}
                 <label>Name:
                     <input type="text" name="name" placeholder="Choose a name" onChange={handleChange} />
                 </label>
-                <input type="submit" />
+                <input className="submit-button" type="submit" />
             </form>
-        </div>
+        // </div>
     )
 }
 export default AddKit

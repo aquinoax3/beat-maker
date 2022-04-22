@@ -16,7 +16,7 @@ function KitDisplay() {
         fetch('/users/{:id}')
         .then(resp => resp.json())
         .then(kitsData => {
-        //   console.log("Kits brought in from backend:", kitsData)
+          console.log("Kits brought in from backend:", kitsData)
             setKits(kitsData.kits);
             setUser(kitsData);
         })
@@ -48,7 +48,6 @@ function KitDisplay() {
             <div className ="kit-maker">
                 <KitMaker myKit={myKit} addKit={addKit} user={user} />
             </div>
-
         </div>
     );
     }

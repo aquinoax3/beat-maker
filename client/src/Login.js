@@ -6,7 +6,8 @@ function Login({setCurrentUser}) {
     const [password, setPassword] = useState("")
     const [login, setLogin] = useState("")
     const [errors, setErrors] = useState([])
-
+    
+    
     function handleSubmit(e){
         e.preventDefault()
         const user = {
@@ -40,7 +41,7 @@ function Login({setCurrentUser}) {
     }
 
     return(
-        <div>
+        <div className="login-div">
         <form onSubmit={handleSubmit}>
             <label>
                 Username:
@@ -53,7 +54,10 @@ function Login({setCurrentUser}) {
             <input type="submit" value="Login" onClick={() => setLogin(true)} />
             <br/>
         </form>
-        <button onClick={handleLogoutClick}>Logout</button>
+        <div className="logout-class">
+            <h3 className="logout-header"> Sad to see you go... log out below</h3>
+            <button className="logout-button" onClick={handleLogoutClick}>Logout</button>
+        </div>
         </div>
     )
 
