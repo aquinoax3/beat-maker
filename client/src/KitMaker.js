@@ -25,7 +25,7 @@ function KitMaker({myKit, user}) {
         if (myKit[0])
             return <Sounds beatsInKit={myKit[0].sounds} />
         else {
-            return <p classname="intro-message">Check Yo Sounds Bro - What Are You Waiting For?</p>
+            return <p classname="intro-message">Check yo sounds - what you waiting for?</p>
         }
     }
 

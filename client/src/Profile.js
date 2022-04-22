@@ -40,7 +40,9 @@ function Profile() {
     return ( 
         <div className='profile-card-container'>
         <div className='profile-card'>
+        {/* <div className="profile-card-split"> */}
             <h3 className="welcome-card">Welcome: </h3> <h3 className="welcome-card"> {profile.username} </h3>
+            <div className="review-header-holder">
             <div className="review-header">
                 <textarea
                     rows='8'
@@ -51,6 +53,8 @@ function Profile() {
                 >{profile.profile}
                 </textarea>
             </div>
+            </div>
+            <div className="review-header-holder">
             <div className='review-footer'>
                 <button className='submit-button' 
                 onClick={() => handleSaveClick()}
@@ -58,7 +62,11 @@ function Profile() {
                     Save
                 </button>
             </div>
-            <img className="profile-pic" src={profile.image} alt="profile"></img>  
+            </div>
+            <div className="profile-pic-holder">
+                <img className="profile-pic" src={profile.image} alt="profile"></img>  
+            </div>
+        {/* </div> */}
         </div>
         </div>
     );

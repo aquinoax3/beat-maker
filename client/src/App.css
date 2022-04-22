@@ -78,7 +78,7 @@ body{
 }
 
 .navbar-links > a:active{
-  color: #c8c4c3;
+  color:pink;
 }
 
 .navbar-header > h1 {
@@ -245,6 +245,7 @@ form {
 
     /* here's my Matt code */
 .overall-div{
+  margin-top: 3vh;
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: center;
@@ -253,7 +254,9 @@ form {
 
 .kit-selection{
   width: 50%;
-  height: 100%
+  height: 100%;
+  display: flex;
+  justify-content: center;
   /* display: flex;
   align-items: ; */
   /* height: 100vh; */
@@ -322,18 +325,25 @@ form {
 .profile-card{
   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
-  width: 50vh;
+  width: 35vw;
   /* background-color: #c2b1e6; */
   background-color: #c8c4c3;
+  /* filter: blur(8px); */
+  /* z-index: -1000; */
+  /* filter: blur(8px); */
+  opacity: 0.97;
   border-radius: 25px;
   text-emphasis-color: #BAABDA;
   /* color: hotpink; */
   /* display: flex; */
-  justify-content: center;
+  /* margin: auto; */
+  /* justify-content: center; */
 }
 
 .welcome-card{
   color:  #6b6a6a;
+  text-align: center;
+  /* justify-content: center; */
 }
 
 .profile-card-container{
@@ -344,7 +354,8 @@ form {
   border-style: solid;
   border-color: #01d1f6;
   border-radius: 25px;
-  width: 55vh;
+  width: 35.5vw;
+  margin-top: 10vh;
 }
 
 .profile-pic {
@@ -353,6 +364,12 @@ form {
   padding: 5px;
   object-fit: cover;
   border-radius: 25px;
+  justify-content: center;
+}
+
+.profile-pic-holder {
+  display: flex;
+  justify-content: center;
 }
 
 .kit-card{
@@ -380,4 +397,38 @@ form {
   display: flex;
   justify-content: center;
   margin: auto;
+}
+
+/* .profile-card-split{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+} */
+
+.review-header-holder{
+  /* justify-content: center; */
+  display: flex;
+  justify-content: center;
+}
+
+.login-div{
+  margin-top: 10vh;
+}
+
+.login-below{
+  text-align: center;
+  color: #c8c4c3;
+}
+
+.display-kit{
+  opacity: 0;
+}
+
+.kit-header{
+  /* text-align: center; */
+  color: #01d1f6;
+}
+
+.home-page-div{
+  margin-top: 10vh;
 }
