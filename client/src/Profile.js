@@ -38,8 +38,9 @@ function Profile() {
 
 
     return ( 
-        <div className='review'>
-            <h3>Welome User: </h3> <h3> {profile.username} </h3>
+        <div className='profile-card-container'>
+        <div className='profile-card'>
+            <h3 className="welcome-card">Welcome: </h3> <h3 className="welcome-card"> {profile.username} </h3>
             <div className="review-header">
                 <textarea
                     rows='8'
@@ -51,13 +52,14 @@ function Profile() {
                 </textarea>
             </div>
             <div className='review-footer'>
-                <button className='save' 
+                <button className='submit-button' 
                 onClick={() => handleSaveClick()}
                 >
                     Save
                 </button>
             </div>
             <img className="profile-pic" src={profile.image} alt="profile"></img>  
+        </div>
         </div>
     );
 }

@@ -16,7 +16,7 @@ function NavBar() {
       <div className="flexbox-nav">
         <div className="navbar-links">
             <NavLink exact to="/">Home</NavLink>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/login">Login/Logout</NavLink>
             <NavLink to="/profile">Profile</NavLink>
             <NavLink to="/kitdisplay">Kit Display</NavLink>
             {/* <NavLink to="/signup">Signup</NavLink> */}

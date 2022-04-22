@@ -17,7 +17,7 @@ function KitMaker({myKit, user}) {
         if (myKit[0])
             return <h1>{myKit[0].name}</h1>
         else {
-            return "click on that ish"
+            return <p classname="intro-message">Click on that ish to the left</p>
         }
     }
 
@@ -25,14 +25,14 @@ function KitMaker({myKit, user}) {
         if (myKit[0])
             return <Sounds beatsInKit={myKit[0].sounds} />
         else {
-            return "Check Yo Sounds Bro"
+            return <p classname="intro-message">Check Yo Sounds Bro - What Are You Waiting For?</p>
         }
     }
 
   return (
     <div className="your-kit-sounds">
-          Your Kit
-        <h2>Check Out Your Beats</h2>
+          {/* Your Kit */}
+        <h1 className="check-out-beats">Check Out Your Beats</h1>
         {checkThisKit()}
         <h3>Sounds</h3>
         {checkThisSound()}

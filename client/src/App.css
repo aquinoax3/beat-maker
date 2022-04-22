@@ -50,12 +50,15 @@ html {
 }
 
 /* nav bar */
+
+body{
+  font-family: helvetica;
+}
+
 .navbar {
   /* display: flex;
   grid-template: "a a a a" 10vh; */
   background-color: transparent;
-
-  
 }
 
 .navbar-header{
@@ -79,7 +82,8 @@ html {
 }
 
 .navbar-header > h1 {
-  color: #01d1f6
+  font-size: 40px;
+  color: #01d1f6;
 }
 
 /* home page */
@@ -107,10 +111,16 @@ form {
   display: flex;
   justify-content: center;
   color: #c8c4c3;
+  padding: 2em;
 }
 
+.form{
+  padding-top: 6em;
+}
 
-
+.logout-div {
+  text-align: center;
+}
 
 
 /* added styling for Homepage */
@@ -128,7 +138,8 @@ form {
 }
 
 .your-kit-sounds{
-  color: white
+  color: white;
+  /* padding: 3em; */
 }
 
 .homepage {
@@ -136,13 +147,14 @@ form {
   /* grid-template:
     "a a" 45vh
     "b b" 45vh; */
-  background-color: #8c8d8f;}
+  background-color: #8c8d8f;
+}
 
-  .recordz {
+.recordz {
     justify-content: center;
     height: 35%;
     width: auto;
-  }
+}
 
   .img_hold {
     margin: auto;
@@ -150,9 +162,21 @@ form {
     justify-content: center;
   }
 
-  .kit-title{
+
+  /* styling for kitsdisplay */
+  .kit-selection > h1{
     color:#01d1f6
   }
+
+  .form-signup{
+
+  }
+
+.your-kit-sounds > h2{
+  color: #01d1f6
+}
+
+  
   /* .homepage {
   display: grid;
   grid-template:
@@ -167,9 +191,19 @@ form {
     "b c c" 15vh
     "b c c" 15vh; */
 
-    body{
-      font-family: helvetica;
-    }
+/* Log out button centered */
+.logout-bttn{
+  border: none;
+  color: black;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: center;
+  border-radius: .5em
+}
+
     
     .submission-form{
       max-width:500px;
@@ -208,13 +242,16 @@ form {
       } */
   }
 
+
     /* here's my Matt code */
 .overall-div{
   display: grid;
   grid-template-columns: 50% 50%;
+  justify-content: center;
 }
 
-    .kit-selection{
+
+.kit-selection{
   width: 50%;
   height: 100%
   /* display: flex;
@@ -243,25 +280,104 @@ form {
 }
 
 .sounds-display {
-  background-color: #8c8d8f;
+  background-color:#d2c8bc;;
   /* width: 50vw;
   height: 50vh; */
   display: flex;
   flex-wrap: wrap;
-  width: 30vw;
+  width: 35vw;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(243, 244, 246, 0.5);
+  margin-bottom: 10px;
 }
 
 .each-sound {
-  border: 2px solid #343050;
-  border-radius: 4px;
+  border: 2px solid #c8c4c3;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 60px;
   color: white;
-  box-shadow: 0px 10px 10px rgba(4,3,1,2);
-  height: 10vh;
-  width: 10vw;
-  margin: 2vw;
+  box-shadow: 0 5px 5px rgba(0, 162, 255, 0.5);
+  height: 7vh;
+  width: 7vw;
+  padding: 10px;
+  margin: auto;
 }
 
+.check-out-beats {
+  color:#01d1f6
+}
+
+.submit-button{
+  background-color: #c8c4c3;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 2px 20px rgba(0, 162, 255, 0.5);
+  color: white;
+}
+
+.profile-card{
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  transition: 0.3s;
+  width: 50vh;
+  /* background-color: #c2b1e6; */
+  background-color: #c8c4c3;
+  border-radius: 25px;
+  text-emphasis-color: #BAABDA;
+  /* color: hotpink; */
+  /* display: flex; */
+  justify-content: center;
+}
+
+.welcome-card{
+  color:  #6b6a6a;
+}
+
+.profile-card-container{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: auto;
+  border-style: solid;
+  border-color: #01d1f6;
+  border-radius: 25px;
+  width: 55vh;
+}
+
+.profile-pic {
+  width: 30vh;
+  height: 30vh;
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.kit-card{
+  margin-bottom: 5vh;
+}
+
+.logout-class {
+  /* display: flex; */
+  justify-content: center;
+}
+
+.logout-header{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.logout-button{
+  background-color: #c8c4c3;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 2px 20px rgba(0, 162, 255, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
