@@ -44,7 +44,7 @@ function AddKit({user, kits, setKits}) {
                 // key:""
             })
             setKits([...kits, formData])
-            alert("Added sound to kit");
+            alert("Added kit");
             //handle add Kits below to add into state above
         
         

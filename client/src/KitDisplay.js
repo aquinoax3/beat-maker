@@ -41,7 +41,7 @@ function KitDisplay() {
     return (  
         <div className="overall-div">
             <div className ="kit-selection">
-                <h1>Kit Selection</h1>
+                <h1 className="display-kit"></h1>
                 <Kits setKits={setKits} kits={kits} user={user} addKit={addKit}/>
             </div>
 

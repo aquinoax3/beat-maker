@@ -8,7 +8,7 @@ function Home() {
 
 
     return ( 
-        <div >
+        <div className="home-page-div">
             <div className="hp-image">
                 <div className='home-pic'> </div>
                 <h1 className="welcome-home-page">Welcome to BeatMaker</h1>

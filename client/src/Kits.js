@@ -21,10 +21,11 @@ function Kits({kits, user, addKit, setKits}) {
 
     return (  
         <div>
+            <h1 className="kit-header">Kit Selection</h1>
             {/* <div className ="kit-selection">  */}
                 {mapKits}
             {/* </div> */}
-            <h3>Starting A New Wave? Create a New Kit Below</h3>
+            <h3 className="kit-header">Starting A New Wave? Create a New Kit Below</h3>
             <AddKit setKits={setKits} kits={kits} user={user}/>
         </div>
     );

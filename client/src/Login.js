@@ -42,6 +42,7 @@ function Login({setCurrentUser}) {
 
     return(
         <div className="login-div">
+        <h1 className="login-below">Login below:</h1>
         <form onSubmit={handleSubmit}>
             <label>
                 Username:
